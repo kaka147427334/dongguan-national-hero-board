@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>东莞区域 · 国庆7天销售榜 · 10月1日</title>
+<style>
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{background:#05060f;padding:24px;font-family:-apple-system,PingFang SC,Microsoft YaHei,sans-serif;display:flex;justify-content:center;}
+  .page{position:relative;width:900px;max-width:100%;border-radius:20px;overflow:hidden;padding:0 0 20px;
+        background:
+          radial-gradient(900px 520px at 50% -8%, #4a2f00 0%, rgba(74,47,0,0) 62%),
+          radial-gradient(700px 420px at 8% 12%, rgba(255,60,60,.20) 0%, rgba(255,60,60,0) 60%),
+          radial-gradient(700px 420px at 92% 16%, rgba(255,90,0,.16) 0%, rgba(255,90,0,0) 60%),
+          linear-gradient(180deg,#16102a 0%,#0c0a1c 38%,#080711 100%);
+        box-shadow:0 18px 60px rgba(0,0,0,.6), 0 0 0 1px rgba(255,215,120,.22);}
+  body.plain{background:#fff;padding:0;}
+  body.plain .page{box-shadow:none;border-radius:0;}
+
+  /* 放射光束 */
+  .rays{position:absolute;top:-420px;left:50%;width:1700px;height:1700px;margin-left:-850px;pointer-events:none;
+        background:repeating-conic-gradient(from 0deg at 50% 50%,
+          rgba(255,222,140,.20) 0deg 4deg,
+          rgba(255,222,140,0) 4deg 11deg);
+        -webkit-mask-image:radial-gradient(circle at 50% 50%, #000 0%, rgba(0,0,0,.6) 34%, rgba(0,0,0,0) 66%);
+        mask-image:radial-gradient(circle at 50% 50%, #000 0%, rgba(0,0,0,.6) 34%, rgba(0,0,0,0) 66%);
+        animation:spin 48s linear infinite;}
+  @keyframes spin{to{transform:rotate(360deg);}}
+  .rays2{position:absolute;top:-300px;left:50%;width:1300px;height:1300px;margin-left:-650px;pointer-events:none;
+        background:repeating-conic-gradient(from 6deg at 50% 50%,
+          rgba(255,255,255,.10) 0deg 2deg,
+          rgba(255,255,255,0) 2deg 16deg);
+        -webkit-mask-image:radial-gradient(circle at 50% 50%, #000 0%, rgba(0,0,0,.45) 30%, rgba(0,0,0,0) 62%);
+        mask-image:radial-gradient(circle at 50% 50%, #000 0%, rgba(0,0,0,.45) 30%, rgba(0,0,0,0) 62%);
+        animation:spin2 70s linear infinite reverse;}
+  @keyframes spin2{to{transform:rotate(360deg);}}
+
+  /* 顶部聚光 */
+  .glow{position:absolute;top:-150px;left:50%;width:820px;height:430px;margin-left:-410px;pointer-events:none;
+        background:radial-gradient(ellipse at 50% 50%, rgba(255,214,120,.34) 0%, rgba(255,180,60,.13) 38%, rgba(255,150,40,0) 70%);
+        filter:blur(8px);}
+
+  /* 闪烁星点 */
+  .spark{position:absolute;width:10px;height:10px;pointer-events:none;border-radius:50%;
+        background:radial-gradient(circle,#fff 0%,rgba(255,236,170,.95) 32%,rgba(255,200,80,0) 72%);
+        animation:tw 2.6s ease-in-out infinite;}
+  .spark::before,.spark::after{content:'';position:absolute;left:50%;top:50%;border-radius:2px;
+        background:linear-gradient(90deg,rgba(255,240,190,0),rgba(255,240,190,.95),rgba(255,240,190,0));}
+  .spark::before{width:38px;height:1.6px;transform:translate(-50%,-50%);}
+  .spark::after{width:1.6px;height:38px;transform:translate(-50%,-50%);
+        background:linear-gradient(180deg,rgba(255,240,190,0),rgba(255,240,190,.95),rgba(255,240,190,0));}
+  @keyframes tw{0%{opacity:.55;transform:scale(.75) rotate(0deg);}50%{opacity:1;transform:scale(1.15) rotate(45deg);}100%{opacity:.55;transform:scale(.75) rotate(90deg);}}
+
+  header{position:relative;z-index:2;padding:30px 28px 20px;text-align:center;border-bottom:1px solid rgba(255,215,120,.22);
+     background:linear-gradient(180deg, rgba(8,6,18,.46) 0%, rgba(8,6,18,.14) 62%, rgba(8,6,18,0) 100%);}
+  h1{margin:0;font-size:29px;font-weight:900;line-height:1.3;
+     background:linear-gradient(180deg,#fffdf3 0%,#ffe9a0 42%,#ffb61e 78%,#ffd75e 100%);
+     -webkit-background-clip:text;background-clip:text;color:transparent;
+     filter:drop-shadow(0 2px 10px rgba(255,170,40,.55));}
+  .badge{display:inline-block;margin-left:8px;padding:3px 12px;border-radius:20px;font-size:12px;font-weight:800;
+     vertical-align:4px;color:#3a2200;-webkit-text-fill-color:#3a2200;
+     background:linear-gradient(180deg,#ffe082,#ffb300);box-shadow:0 0 14px rgba(255,180,40,.6);}
+  .sub{margin:10px 0 0;font-size:14px;color:#f6dca8;letter-spacing:.5px;}
+
+  .board{position:relative;z-index:2;margin:16px 28px 0;border-radius:14px;overflow:hidden;
+     border:1px solid rgba(255,215,120,.34);
+     background:linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.025));
+     box-shadow:0 8px 26px rgba(0,0,0,.5), 0 0 22px rgba(255,180,60,.10) inset;}
+  .bhead{display:flex;align-items:center;gap:12px;padding:11px 16px;
+     background:linear-gradient(90deg,rgba(255,206,84,.30),rgba(255,206,84,.05));
+     border-bottom:1px solid rgba(255,215,120,.30);}
+  .bdate{font-size:20px;font-weight:900;color:#ffeab4;text-shadow:0 0 12px rgba(255,180,60,.5);}
+  .bwk{font-size:12px;font-weight:800;color:#3a2200;border-radius:6px;padding:2px 9px;
+     background:linear-gradient(180deg,#ffe082,#f0a30c);}
+  .btag{margin-left:auto;font-size:12px;font-weight:700;color:#e8c98a;}
+
+  /* 上榜人卡片：不排名次，名字高亮 + 门店置下 + 台数徽章 */
+  .list{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:12px 14px 14px;}
+  .hero{position:relative;text-align:center;padding:18px 8px 14px;border-radius:12px;overflow:hidden;
+     background:linear-gradient(180deg,rgba(255,206,84,.20),rgba(255,206,84,.035));
+     border:1px solid rgba(255,215,120,.36);
+     box-shadow:0 0 20px rgba(255,180,60,.14) inset, 0 4px 14px rgba(0,0,0,.35);}
+  .hero::after{content:'';position:absolute;inset:0;pointer-events:none;
+     background:linear-gradient(105deg,rgba(255,255,255,0) 30%,rgba(255,255,255,.40) 48%,rgba(255,255,255,0) 62%);
+     animation:shine 3.4s linear infinite;}
+  .hero:nth-child(2)::after{animation-delay:1.1s;}
+  .hero:nth-child(3)::after{animation-delay:2.2s;}
+  .hero:nth-child(4)::after{animation-delay:.6s;}
+  .hero:nth-child(5)::after{animation-delay:1.7s;}
+  .hero:nth-child(6)::after{animation-delay:.3s;}
+  .hero:nth-child(7)::after{animation-delay:1.3s;}
+  .hero:nth-child(8)::after{animation-delay:2.0s;}
+  .hero:nth-child(9)::after{animation-delay:.9s;}
+  .nm{display:block;font-size:22px;font-weight:900;color:#fff;letter-spacing:2px;
+     text-shadow:0 0 20px rgba(255,205,90,.85), 0 0 44px rgba(255,170,40,.45);}
+  .count{display:inline-block;margin:6px 0 0;font-size:13px;font-weight:900;color:#3a2200;letter-spacing:1px;
+     border-radius:9px;padding:2px 10px;
+     background:linear-gradient(180deg,#ffe082,#f0a30c);box-shadow:0 0 14px rgba(255,180,40,.5);}
+  .st{display:inline-block;margin-top:8px;font-size:12.5px;font-weight:800;color:#e8cf9f;letter-spacing:.5px;}
+  @keyframes shine{0%{transform:translateX(-120%);}60%,100%{transform:translateX(120%);}}
+
+  .empty{padding:14px 16px;color:#9aa0b8;font-size:14px;font-weight:700;}
+  .pending{border-color:rgba(160,170,200,.35);border-style:dashed;box-shadow:none;}
+  .pending .bhead{background:rgba(255,255,255,.05);border-bottom:1px solid rgba(160,170,200,.22);}
+  .pending .bdate{color:#c9cfdd;text-shadow:none;}
+  .pending .bwk{background:rgba(160,170,200,.35);color:#e8ecf5;}
+  .pending .btag{color:#8e95ab;}
+
+  .foot{position:relative;z-index:2;margin:18px 28px 0;padding:14px 16px;border-radius:12px;text-align:center;
+     font-size:16px;font-weight:900;letter-spacing:1px;color:#3a2200;
+     background:linear-gradient(90deg,#ffcf5c,#ff9d00 50%,#ffcf5c);
+     box-shadow:0 0 26px rgba(255,170,40,.55),0 6px 20px rgba(0,0,0,.45);}
+  .tip{position:relative;z-index:2;margin:12px 28px 0;font-size:12px;color:#8b93ab;text-align:center;}
+  .dlwrap{position:relative;z-index:2;margin:12px 28px 0;text-align:center;}
+  .dl{display:inline-block;padding:9px 20px;border-radius:10px;font-size:14px;font-weight:800;text-decoration:none;color:#3a2200;
+     background:linear-gradient(180deg,#ffe082,#f0a30c);box-shadow:0 0 16px rgba(255,180,40,.5);}
+  body.plain .dlwrap{display:none;}
+
+  @media (max-width:720px){
+    body{padding:10px;}
+    .page{border-radius:12px;}
+    header{padding:20px 16px 16px;}
+    h1{font-size:21px;}
+    .sub{font-size:12px;}
+    .board{margin:12px 16px 0;}
+    .bhead{padding:9px 12px;gap:8px;}
+    .bdate{font-size:17px;}
+    .list{padding:10px 10px 12px;gap:7px;}
+    .hero{padding:13px 4px 11px;border-radius:10px;}
+    .nm{font-size:17px;letter-spacing:1px;}
+    .count{font-size:11.5px;padding:2px 8px;}
+    .st{font-size:11px;margin-top:6px;}
+    .foot{margin:14px 16px 0;padding:11px 12px;font-size:13.5px;}
+    .tip{margin:8px 16px 0;font-size:11px;}
+    .spark::before{width:26px;} .spark::after{height:26px;}
+  }
+</style>
+</head>
+<body>
+<script>if(location.search.indexOf('plain=1')>=0) document.body.classList.add('plain');</script>
+<div class='page'>
+  <div class='rays'></div>
+  <div class='rays2'></div>
+  <div class='glow'></div>
+  <div class='spark' style='top:58px;left:78px;animation-delay:-.2s'></div>
+  <div class='spark' style='top:34px;right:96px;animation-delay:-1.1s'></div>
+  <div class='spark' style='top:132px;left:150px;animation-delay:-1.9s'></div>
+  <div class='spark' style='top:96px;right:196px;animation-delay:-.7s'></div>
+  <div class='spark' style='top:186px;left:58px;animation-delay:-1.5s'></div>
+  <div class='spark' style='top:238px;right:66px;animation-delay:-2.3s'></div>
+  <div class='spark' style='top:330px;left:104px;animation-delay:-.9s'></div>
+  <div class='spark' style='top:420px;right:120px;animation-delay:-1.7s'></div>
+  <div class='spark' style='top:560px;left:70px;animation-delay:-2.6s'></div>
+  <div class='spark' style='top:640px;right:78px;animation-delay:-.4s'></div>
+  <div class='spark' style='top:760px;left:130px;animation-delay:-1.3s'></div>
+  <div class='spark' style='top:840px;right:150px;animation-delay:-2.1s'></div>
+  <div class='spark' style='top:940px;left:80px;animation-delay:-.6s'></div>
+  <div class='spark' style='top:1020px;right:90px;animation-delay:-1.8s'></div>
+  <div class='spark' style='top:1180px;left:60px;animation-delay:-2.4s'></div>
+  <div class='spark' style='top:1260px;right:70px;animation-delay:-.7s'></div>
+  <div class='spark' style='top:1420px;left:90px;animation-delay:-1.5s'></div>
+  <div class='spark' style='top:1500px;right:100px;animation-delay:-2.9s'></div>
+  <div class='spark' style='top:1660px;left:75px;animation-delay:-1.1s'></div>
+  <div class='spark' style='top:1740px;right:85px;animation-delay:-.3s'></div>
+  <div class='spark' style='top:1900px;left:85px;animation-delay:-2.0s'></div>
+  <div class='spark' style='top:1980px;right:95px;animation-delay:-1.2s'></div>
+
+  <header>
+    <h1>东莞区域 · 国庆7天销售榜</h1>
+    <p class='sub'>名字后方数字为当日现车销售台数 ｜ 排名不分先后 · 当日公布</p>
+    <p class='sub'>以下名单由各店店长提供</p>
+  </header>
+
+  <!-- 10/1 周四 -->
+  <section class='board'>
+    <div class='bhead'>
+      <span class='bdate'>10月1日</span><span class='bwk'>周四</span>
+      <span class='btag'>当日上榜 38 人 · 合计 59 台</span>
+    </div>
+    <div class='list'>
+      <div class='hero'><span class='nm'>刘文鹏</span><span class='count'>4台</span><span class='st'>寮步车城店</span></div>
+      <div class='hero'><span class='nm'>莫东江</span><span class='count'>2台</span><span class='st'>寮步车城店</span></div>
+      <div class='hero'><span class='nm'>李志鹏</span><span class='count'>3台</span><span class='st'>寮步车城店</span></div>
+      <div class='hero'><span class='nm'>黄浩枫</span><span class='count'>2台</span><span class='st'>寮步车城店</span></div>
+      <div class='hero'><span class='nm'>梁柱辉</span><span class='count'>2台</span><span class='st'>寮步车城店</span></div>
+      <div class='hero'><span class='nm'>梁浩南</span><span class='count'>4台</span><span class='st'>莞太路店</span></div>
+      <div class='hero'><span class='nm'>周　乐</span><span class='count'>2台</span><span class='st'>莞太路店</span></div>
+      <div class='hero'><span class='nm'>刘道锋</span><span class='count'>1台</span><span class='st'>莞太路店</span></div>
+      <div class='hero'><span class='nm'>阮先凤</span><span class='count'>1台</span><span class='st'>莞太路店</span></div>
+      <div class='hero'><span class='nm'>王文杰</span><span class='count'>1台</span><span class='st'>莞太路店</span></div>
+      <div class='hero'><span class='nm'>阮小平</span><span class='count'>2台</span><span class='st'>莞太路店</span></div>
+      <div class='hero'><span class='nm'>钱真真</span><span class='count'>2台</span><span class='st'>常朗路店</span></div>
+      <div class='hero'><span class='nm'>黄双辉</span><span class='count'>1台</span><span class='st'>常朗路店</span></div>
+      <div class='hero'><span class='nm'>周　杰</span><span class='count'>2台</span><span class='st'>常朗路店</span></div>
+      <div class='hero'><span class='nm'>黎丰源</span><span class='count'>1台</span><span class='st'>常朗路店</span></div>
+      <div class='hero'><span class='nm'>钟浩潮</span><span class='count'>1台</span><span class='st'>常朗路店</span></div>
+      <div class='hero'><span class='nm'>邓　祁</span><span class='count'>1台</span><span class='st'>常朗路店</span></div>
+      <div class='hero'><span class='nm'>陈依琪</span><span class='count'>2台</span><span class='st'>虎门车城店</span></div>
+      <div class='hero'><span class='nm'>彭志勇</span><span class='count'>1台</span><span class='st'>虎门车城店</span></div>
+      <div class='hero'><span class='nm'>张艺科</span><span class='count'>1台</span><span class='st'>虎门车城店</span></div>
+      <div class='hero'><span class='nm'>陈锦鹏</span><span class='count'>1台</span><span class='st'>虎门车城店</span></div>
+      <div class='hero'><span class='nm'>钟彩琳</span><span class='count'>1台</span><span class='st'>石排大道店</span></div>
+      <div class='hero'><span class='nm'>费　重</span><span class='count'>3台</span><span class='st'>石排大道店</span></div>
+      <div class='hero'><span class='nm'>卢锦茹</span><span class='count'>1台</span><span class='st'>石排大道店</span></div>
+      <div class='hero'><span class='nm'>罗　文</span><span class='count'>2台</span><span class='st'>松山湖店</span></div>
+      <div class='hero'><span class='nm'>罗流强</span><span class='count'>2台</span><span class='st'>松山湖店</span></div>
+      <div class='hero'><span class='nm'>胡佳媚</span><span class='count'>1台</span><span class='st'>东城店</span></div>
+      <div class='hero'><span class='nm'>黎柱添</span><span class='count'>1台</span><span class='st'>东城店</span></div>
+      <div class='hero'><span class='nm'>曹　志</span><span class='count'>1台</span><span class='st'>东城店</span></div>
+      <div class='hero'><span class='nm'>杨　鹏</span><span class='count'>1台</span><span class='st'>东城店</span></div>
+      <div class='hero'><span class='nm'>黄文智</span><span class='count'>1台</span><span class='st'>厚街店</span></div>
+      <div class='hero'><span class='nm'>刘　浩</span><span class='count'>1台</span><span class='st'>企石店</span></div>
+      <div class='hero'><span class='nm'>刘洁芳</span><span class='count'>1台</span><span class='st'>高胜车城店</span></div>
+      <div class='hero'><span class='nm'>吴慧琳</span><span class='count'>2台</span><span class='st'>长安振安东路店</span></div>
+      <div class='hero'><span class='nm'>农钧卫</span><span class='count'>1台</span><span class='st'>长安振安东路店</span></div>
+      <div class='hero'><span class='nm'>徐壮壮</span><span class='count'>1台</span><span class='st'>长安振安东路店</span></div>
+      <div class='hero'><span class='nm'>张荣华</span><span class='count'>1台</span><span class='st'>长安振安东路店</span></div>
+      <div class='hero'><span class='nm'>王译仟</span><span class='count'>1台</span><span class='st'>大岭山镇店</span></div>
+    </div>
+  </section>
+
+  <!-- 10/2-10/7 待公布 -->
+  <section class='board pending'>
+    <div class='bhead'>
+      <span class='bdate'>10月2日</span><span class='bwk'>周五</span>
+      <span class='btag'>待公布</span>
+    </div>
+    <div class='empty'>当日名单于次日公布</div>
+  </section>
+  <section class='board pending'>
+    <div class='bhead'>
+      <span class='bdate'>10月3日</span><span class='bwk'>周六</span>
+      <span class='btag'>待公布</span>
+    </div>
+    <div class='empty'>当日名单于次日公布</div>
+  </section>
+  <section class='board pending'>
+    <div class='bhead'>
+      <span class='bdate'>10月4日</span><span class='bwk'>周日</span>
+      <span class='btag'>待公布</span>
+    </div>
+    <div class='empty'>当日名单于次日公布</div>
+  </section>
+  <section class='board pending'>
+    <div class='bhead'>
+      <span class='bdate'>10月5日</span><span class='bwk'>周一</span>
+      <span class='btag'>待公布</span>
+    </div>
+    <div class='empty'>当日名单于次日公布</div>
+  </section>
+  <section class='board pending'>
+    <div class='bhead'>
+      <span class='bdate'>10月6日</span><span class='bwk'>周二</span>
+      <span class='btag'>待公布</span>
+    </div>
+    <div class='empty'>当日名单于次日公布</div>
+  </section>
+  <section class='board pending'>
+    <div class='bhead'>
+      <span class='bdate'>10月7日</span><span class='bwk'>周三</span>
+      <span class='btag'>待公布</span>
+    </div>
+    <div class='empty'>当日名单于次日公布 · 国庆收官</div>
+  </section>
+
+  <div class='foot'>10月1日 现车销售合计 59台 · 东莞区域</div>
+  <p class='tip'>东莞区域 · 名单以门店当日现车实销为准 ｜ 更新至 2026-10-01</p>
+  <div class='dlwrap'><a class='dl' href='national-hero-board.png' download='东莞区域国庆7天销售榜-10月1日.png'>保存高清长图（可直接转发）</a></div>
+</div>
+</body>
+</html>
